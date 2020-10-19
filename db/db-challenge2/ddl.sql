@@ -34,3 +34,17 @@ CREATE TABLE messages (
     updated_at          TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     update_user_id      INT(11) NOT NULL
 );
+
+CREATE TABLE tasks (
+    id                  INT(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    rep_user_id         INT(11) NOT NULL REFERENCES users(id),
+    room_id             INT(11) NOT NULL REFERENCES rooms(id),
+    create_user_id      INT(11) NOT NULL REFERENCES users(id),
+    content             VARCHAR(1000) NOT NULL,
+    due_date            DATETIME NOT NULL,
+    is_completed        TINYINT(1) NOT NULL DEFAULT 0,
+    is_deleted          TINYINT(1) NOT NULL DEFAULT 0,
+    created_at          DATETIME NOT NULL,
+    updated_at          TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    update_user_id      INT(11) NOT NULL
+);
