@@ -48,3 +48,10 @@ CREATE TABLE tasks (
     updated_at          TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     update_user_id      INT(11) NOT NULL
 );
+
+CREATE TABLE rooms_users (
+    user_id             INT(11) NOT NULL REFERENCES users(id),
+    room_id             INT(11) NOT NULL REFERENCES rooms(id),
+    joined_at           DATETIME NOT NULL,
+    PRIMARY KEY (user_id, room_id)
+);
