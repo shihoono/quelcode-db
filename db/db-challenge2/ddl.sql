@@ -7,6 +7,7 @@ CREATE TABLE users (
     office_phone_number VARCHAR(13),
     phone_number        VARCHAR(13),
     is_deleted          TINYINT(1) NOT NULL DEFAULT 0,
-    created_at          TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    created_at          DATETIME NOT NULL,
+    updated_at          TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
