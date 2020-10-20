@@ -3,7 +3,7 @@ CREATE TABLE users (
     email               VARCHAR(100) NOT NULL,
     password            VARCHAR(100) NOT NULL,
     name                VARCHAR(100) NOT NULL,
-    indroduction        VARCHAR(1000), 
+    introduction        VARCHAR(1000), 
     office_phone_number VARCHAR(13),
     phone_number        VARCHAR(13),
     is_deleted          TINYINT(1) NOT NULL DEFAULT 0,
