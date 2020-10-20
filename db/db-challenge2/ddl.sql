@@ -15,7 +15,7 @@ CREATE TABLE rooms (
     id                  INT(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
     name                VARCHAR(100) NOT NULL,
     description         VARCHAR(1000),
-    is_file_permit      TINYINT(1) NOT NULL DEFAULT 0,
+    is_file_sendable    TINYINT(1) NOT NULL DEFAULT 0,
     is_deleted          TINYINT(1) NOT NULL DEFAULT 0,
     created_at          DATETIME NOT NULL,
     create_user_id      INT(11) NOT NULL,
