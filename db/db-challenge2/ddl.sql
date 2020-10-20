@@ -26,7 +26,7 @@ CREATE TABLE rooms (
 CREATE TABLE messages (
     id                  INT(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
     room_id             INT(11) NOT NULL REFERENCES rooms(id),
-    create_user_id      INT(11) NOT NULL REFERENCES users(id),
+    user_id             INT(11) NOT NULL REFERENCES users(id),
     content             VARCHAR(1000) NOT NULL,
     file                VARCHAR(100),
     is_deleted          TINYINT(1) NOT NULL DEFAULT 0,
